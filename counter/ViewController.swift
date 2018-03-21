@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     var count = 0
+    var value = 0
     
     @IBOutlet weak var lblCount: UILabel!
     
@@ -27,8 +28,18 @@ class ViewController: UIViewController {
         lblCount.text = String(count)
     }
     @IBAction func btReset(_ sender: Any) {
-        count = -1
+        count = 0
         lblCount.text = String(count)
+    }
+    @IBAction func btColor(_ sender: Any) {
+        if value==0 {
+            view.backgroundColor = UIColor.yellow
+            value = 1
+        }else {
+            view.backgroundColor = UIColor.green
+            value = 0
+        }
+        
     }
     
 
